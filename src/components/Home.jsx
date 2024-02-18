@@ -17,7 +17,7 @@ const Home = (nav) => {
           Mohit Raj Parit
         </h1>
         <h2 className='text-1xl py-2 sm:text-2xl font-bold text-[#8892b0]'>
-          {false ? <TypeAnimation
+          {true ? <TypeAnimation
           sequence={[
             'I \'m a Full Stack Developer',
             1000, 
