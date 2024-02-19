@@ -16,24 +16,24 @@ const Navbar = () => {
         <img></img>
       </div>
       <ul className='hidden md:flex'>
-          <li className='text-1xl'>
+          <li className='hover:animate-pulse hover:text-green-600'>
             <a href="/">Home</a>
           </li>
-          <li>
+          <li className='hover:animate-pulse hover:text-green-600'>
             <a href="/about">About</a>
           </li>
-          <li>
+          <li className='hover:animate-pulse hover:text-green-600'>
             <a href="/skills">Skills</a>
           </li>
-          <li>
+          <li className='hover:animate-pulse hover:text-green-600'>
             <a href="/work">Work</a>
           </li>
-          <li>
+          <li className='hover:animate-pulse hover:text-green-600'>
             <a href="/contact">Contact</a>
           </li>
       </ul>
       <div onClick={handleClick} className='md:hidden z-10'>
-        {!nav?<FaBars/> :<FaTimes/>}
+        {!nav? <FaBars/> :<FaTimes/>}
       </div>
       <ul className={!nav ?'hidden' :'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
       <li className='py-6 text-4xl'>

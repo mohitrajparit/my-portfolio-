@@ -5,6 +5,7 @@ import Work from './components/Work';
 import Skills from './components/Skills';
 import Navbar from "./components/Navbar"
 import {Routes, Route} from 'react-router-dom';
+import Footer from './components/Footer'
 function App() {
 
   return (
@@ -18,7 +19,7 @@ function App() {
       <Route path="/skills" element={<Skills/>}/>
       </Routes>
       
-      
+      <Footer/>
     </>
       
   )
