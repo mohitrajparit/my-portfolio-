@@ -1,14 +1,14 @@
 import React from 'react'
-import img  from '../../assets/images/profile.jpg';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { TypeAnimation } from 'react-type-animation';
 
 import { useEffect,useState } from 'react';
-const Home = (nav) => {
- 
+import Navbar from './Navbar';
+const Home = () => {
+  const [nav,setNav]=useState(true);
   return (
-
-    
+<>
+    <Navbar/>
     <div name='home' className=' w-full h-screen bg-[#0a192f]'>
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full '
       >
@@ -37,7 +37,7 @@ const Home = (nav) => {
           building responsive full-stack web applications.
         </p>
         <div>
-          <button className='text-white group border-2 rounded px-6 py-3 my-2 flex items-center hover:bg-green-600 hover:border-green-600 '>
+          <button className='text-white group border-2 rounded-full px-6 py-3 my-2 flex items-center hover:bg-green-600 hover:border-green-600 '>
             View Work 
             <span className='group-hover:rotate-90 duration-300 '>
               <HiArrowNarrowRight className='ml-3'/>
@@ -47,6 +47,7 @@ const Home = (nav) => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
