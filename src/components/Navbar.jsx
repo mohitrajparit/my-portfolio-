@@ -17,20 +17,29 @@ const Navbar = () => {
         <img></img>
       </div>
       <ul className='hidden md:flex'>
-          <li className='hover:animate-pulse hover:text-green-600'>
-            <a href="/">Home</a>
+          <li className='hover:animate-pulse
+          hover:underline
+          hover:text-green-600'>
+            <a href="/" className='text-lg'>Home</a>
           </li>
-          <li className='hover:animate-pulse hover:text-green-600'>
-            <a href="/about">About</a>
+          <li className='hover:animate-pulse
+          hover:underline hover:text-green-600'>
+            <a href="/about" className='text-lg'>About</a>
           </li>
-          <li className='hover:animate-pulse hover:text-green-600'>
-            <a href="/skills">Skills</a>
+          <li className='hover:animate-pulse 
+          hover:underline 
+          hover:text-green-600'>
+            <a href="/skills" className='text-lg'>Skills</a>
           </li>
-          <li className='hover:animate-pulse hover:text-green-600'>
-            <a href="/work">Work</a>
+          <li className='hover:animate-pulse 
+          hover:underline
+          hover:text-green-600'>
+
+            <a href="/work" className='text-lg'>Work</a>
           </li>
-          <li className='hover:animate-pulse hover:text-green-600'>
-            <a href="/contact">Contact</a>
+          <li className='hover:animate-pulse 
+          hover:underline hover:text-green-600'>
+            <a href="/contact" className='text-lg'>Contact</a>
           </li>
       </ul>
       <div onClick={handleClick} className='md:hidden z-10'>
