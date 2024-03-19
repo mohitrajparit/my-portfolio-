@@ -15,10 +15,13 @@ import Mysql from '../assets/mySql.png'
 import Vs from '../assets/vscode.png'
 import Express from '../assets/express.png'
 import Bootstrap from '../assets/bootstrap.png'
-
+import Navbar from './Navbar';
 const Skills = () => {
   return (
+    <>
+    <Navbar/>    
     <div name='skills' className='w-full h-full bg-[#0a192f] text-gray-300'>
+
       <div className='max-w-[1000px] mx-auto p-4'>
   <div className='mt-24'>
     <p className='text-4xl font-bold inline border-b-4 border-green-600'>Skills</p>
@@ -89,6 +92,8 @@ const Skills = () => {
       </div>
       <div className='h-100'></div>
     </div>
+    </>
+
   )
 }
 

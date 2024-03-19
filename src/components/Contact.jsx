@@ -1,6 +1,7 @@
 import React, { useRef,useState } from 'react'
 import emailjs from '@emailjs/browser';
 import SuccessContact from './SuccessContact';
+import Navbar from './Navbar';
 const Contact = () => {
   const formm=useRef();
   const [sent,setSent]=useState(false);
@@ -24,6 +25,7 @@ const Contact = () => {
   
     return (
       <>
+      <Navbar/>
       <div name='contact' className='w-full h-screen bg-[#0a192f] flex justify-center items-center p-4'>
         {sent? <SuccessContact/>:<form ref={formm} onSubmit={sendEmail} className='flex flex-col max-w-[600px] w-full' >
           <div className='pb-8 mt-40'>
