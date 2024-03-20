@@ -18,27 +18,27 @@ const Navbar = () => {
       </div>
       <ul className='hidden md:flex'>
           <li className='hover:animate-pulse
-          hover:underline
+          
           hover:text-green-600'>
             <a href="/" className='text-lg'>Home</a>
           </li>
           <li className='hover:animate-pulse
-          hover:underline hover:text-green-600'>
+           hover:text-green-600'>
             <a href="/about" className='text-lg'>About</a>
           </li>
           <li className='hover:animate-pulse 
-          hover:underline 
+          
           hover:text-green-600'>
             <a href="/skills" className='text-lg'>Skills</a>
           </li>
           <li className='hover:animate-pulse 
-          hover:underline
+          
           hover:text-green-600'>
 
             <a href="/work" className='text-lg'>Work</a>
           </li>
           <li className='hover:animate-pulse 
-          hover:underline hover:text-green-600'>
+           hover:text-green-600'>
             <a href="/contact" className='text-lg'>Contact</a>
           </li>
       </ul>
