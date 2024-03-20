@@ -26,7 +26,7 @@ const Home = () => {
 </div>
   
 <div className="grid grid-cols-2 gap-4 bg-[#0a192f]">
-    <div name='home' className='w-[110%] h-screen bg-[#0a192f]'>
+    <div name='home' className='w-[110%] h-screen bg-[#0a192f] ml-20'>
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full '
       >
         <p className='text-green-600 text-3xl'>Hi my name is</p>
@@ -66,7 +66,10 @@ const Home = () => {
         </div>
       </div>
       <div>
-      <Lottie animationData={Animation} loop={true} width={2} />
+        <div className='w-96 ml-32 mt-10'>
+        <Lottie animationData={Animation} loop={true} height={2} />
+        </div>
+      
       </div>
     </div>
     </>
