@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { TypeAnimation } from 'react-type-animation';
 import Lottie from "lottie-react";
@@ -6,6 +7,8 @@ import Animation from '../assets/Animation2.json';
 import Navbar from './Navbar';
 
 const Home = () => {
+  // useHistory
+  const navigate=useNavigate();
   return (
     <div className='bg-[#0a192f]'>
       <Navbar />
@@ -38,12 +41,14 @@ const Home = () => {
               I’m a full-stack developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building responsive full-stack web applications.
             </p>
             <div>
-              <button className='text-white group border-2 rounded-full px-6 py-3 my-2 flex items-center hover:bg-green-600 hover:border-green-600 '>
+            
+            <button className='text-white group border-2 rounded-full px-6 py-3 my-2 flex items-center hover:bg-green-600 hover:border-green-600 '  onClick={() => navigate('/work')}>
                 View Work
                 <span className='group-hover:rotate-90 duration-300 '>
                   <HiArrowNarrowRight className='ml-3' />
                 </span>
               </button>
+              
             </div>
           </div>
         </div>

@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
+import Profile from "../assets/profile.jpg"
 const About = () => {
+  const [load,setLoad]=useState(true);
+  useEffect(()=>{
+    
+  },[])
   return (
     <>
     <Navbar/>
+    <div className='flex flex-col justify-center items-center bg-[#0a192f] pt-20 '>
+      {load ? <img src={Profile} width={200}alt="Profile_image" className='rounded-full'/>:<p></p>}
+    </div>
     <div name='about' className='w-full h-screen bg-[#0a192f] text-gray-300'>
-        <div className='flex flex-col justify-center items-center w-full h-full'>
+        <div className='flex flex-col items-center w-full h-full'>
           <div className='max-w-[1000px] w-full grid grid-cols-2 gap-8 '>
           <span>
             <p className='text-4xl font-bold inline transition-all duration-900 border-b-4 border-green-600'>

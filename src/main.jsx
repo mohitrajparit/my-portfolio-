@@ -5,33 +5,12 @@ import './index.css'
 import {
   BrowserRouter,
 } from "react-router-dom";
-// const router=createBrowserRouter([
-//   {
-//     path:'/',
-//     element:<App/>,
-//     children:[
-//       {
-//         path:"",
-//         element:<Home/>
-//       },
-//       {
-//         path:"about",
-//         element:<About/>
-//       },{
-//         path:"contact",
-//         element:<Contact/>
-//       },{
-//         path:"project",
-//         element:<Project/>
-//       },{
-//         path:"skills",
-//         element:<Skills/>
-//       }
-//     ]
-//   }
-// ])
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter>
   <App/>
   </BrowserRouter>
+  </React.StrictMode>
+  
 )
