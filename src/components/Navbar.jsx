@@ -74,7 +74,7 @@ const Navbar = () => {
             <a className='flex justify-between items-center w-full text-gray-300 ' href={`mailto:${email}`}>Mail <HiOutlineMail size={30}/></a>
           </li>
           <li className='w-[160px] mb-2 mt-2 pt-2 pb-2 h-60px flex justify-between items center items-center ml-[-110px] hover:ml-[-10px] duration-300 bg-[#565f69] '>
-            <a className='flex justify-between items-center w-full text-gray-300 ' href="https://drive.google.com/file/d/1zAVC4DWsJD_TOuT094WAf5PQxXZPBujK/view?usp=drive_link">Resume <BsFillPersonLinesFill size={30}/></a>
+            <a className='flex justify-between items-center w-full text-gray-300 ' href="https://drive.google.com/file/d/1OmbycciWE2mEPPup6ZXJ_nJoTgsiSLTy/view?usp=sharing">Resume <BsFillPersonLinesFill size={30}/></a>
           </li>
         </ul>
       </div>
