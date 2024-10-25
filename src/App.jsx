@@ -6,6 +6,8 @@ import Skills from './components/Skills';
 import Navbar from "./components/Navbar"
 import {Routes, Route} from 'react-router-dom';
 import Footer from './components/Footer'
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 function App() {
 
   return (

@@ -27,7 +27,7 @@ const About = () => {
             <p>Hi. I'm Mohit Raj Parit,nice to meet you .Please take a look around.</p>
             </div>
             <div>
-              <p>I am a passionate and driven pre final year Computer Science Engineering student. I have a strong interest in technology and its applications, particularly in full stack development and computer programming. With a curious mind and a knack for problem-solving,I have solved a plenty of question on <a href="https://leetcode.com/_mohit_raj/" className="text-green-500 hover:text-green-700 underline"
+              <p>I am a passionate and driven final year Computer Science Engineering student. I have a strong interest in technology and its applications, particularly in full stack development and computer programming. With a curious mind and a knack for problem-solving,I have solved a plenty of question on <a href="https://leetcode.com/_mohit_raj/" className="text-green-500 hover:text-green-700 underline"
       target="_blank" rel="noopener noreferrer">Leetcode</a> , <a href="https://www.codechef.com/users/mohit_raj_066" className="text-green-500 hover:text-green-700 underline"
       target="_blank" rel="noopener noreferrer">Codechef</a> , <a href="https://codeforces.com/profile/mohitraj0606" className="text-green-500 hover:text-green-700 underline"
       target="_blank" rel="noopener noreferrer">Codeforces</a> , etc. I am constantly exploring new ideas and technologies to expand my skill set and enhance my capabilities as a developer.</p>  

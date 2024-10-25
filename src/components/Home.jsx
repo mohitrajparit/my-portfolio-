@@ -1,14 +1,17 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { TypeAnimation } from 'react-type-animation';
-import Lottie from "lottie-react";
+import Lottie from 'lottie-react';
 import Animation from '../assets/Animation2.json';
 import Navbar from './Navbar';
+import { useSelector } from 'react-redux';
+import { selectNavOpen } from '../features/navbarSlice';
 
 const Home = () => {
-  // useHistory
-  const navigate=useNavigate();
+  const navigate = useNavigate();
+  const navOpen = useSelector(selectNavOpen); // Access navOpen state from Redux
+
   return (
     <div className='bg-[#0a192f]'>
       <Navbar />
@@ -24,31 +27,35 @@ const Home = () => {
               Mohit Raj Parit
             </h1>
             <h2 className='text-1xl py-2 sm:text-[1.35rem] font-bold text-[#8892b0]'>
-              <TypeAnimation
-                sequence={[
-                  'I\'m a Full Stack Developer',
-                  1000,
-                  'I\'m a Competitive Programmer',
-                  1000,
-                ]}
-                wrapper="span"
-                speed={50}
-                style={{ fontSize: '1.5em', display: 'inline-block' }}
-                repeat={Infinity}
-              />
+              {/* Render TypeAnimation only if navOpen is false */}
+              {!navOpen && (
+                <TypeAnimation
+                  sequence={[
+                    "I'm a Full Stack Developer",
+                    1000,
+                    "I'm a Competitive Programmer",
+                    1000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  style={{ fontSize: '1.5em', display: 'inline-block' }}
+                  repeat={Infinity}
+                />
+              )}
             </h2>
             <p className='text-[#8892b0] text-[1.20rem] py-4 max-w-[700px]'>
               I’m a full-stack developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building responsive full-stack web applications.
             </p>
             <div>
-            
-            <button className='text-white group border-2 rounded-full px-6 py-3 my-2 flex items-center hover:bg-green-600 hover:border-green-600 '  onClick={() => navigate('/work')}>
+              <button
+                className='text-white group border-2 rounded-full px-6 py-3 my-2 flex items-center hover:bg-green-600 hover:border-green-600'
+                onClick={() => navigate('/work')}
+              >
                 View Work
                 <span className='group-hover:rotate-90 duration-300 '>
                   <HiArrowNarrowRight className='ml-3' />
                 </span>
               </button>
-              
             </div>
           </div>
         </div>
