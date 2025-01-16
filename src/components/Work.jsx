@@ -9,6 +9,7 @@ import drum from '../../assets/drumbeat.png'
 import weather from '../../assets/weather.png'
 import tin from '../../assets/tindog.png'
 import da from '../../assets/da.png'
+import DesBut from './DesButton'
 const Work = () => {
   return (
     <>
@@ -21,54 +22,46 @@ const Work = () => {
     <p className='py-4 text-lg text-gray-200'>These are some of my projects:</p>
   </div>
   <div className='w-full grid grid cols-1 sm:grid-cols-2 gap-4 text-center py-8 '>
+
     <div className='w-[80%] pb-2 shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
       <h2 className='text-gray-300 font-bold'>CRUD-application</h2>
       <img src={crudd} width={300} className='p-2 m-auto'/>
-      <button className='m-1 p-1 bg-pink-400 rounded-full'><a href="https://proj-crud-mp.vercel.app/">Live Demo</a></button>
-      <button className='m-1 p-1 bg-pink-400 rounded-full '><a href="https://github.com/mohitrajparit/proj-crud-mp">Source Code</a> </button>
+      <DesBut link={"https://proj-crud-mp.vercel.app/"} text={"Live Demo"}/>
+      <DesBut link={"https://github.com/mohitrajparit/proj-crud-mp"} text={"Source Code"} />
     </div>
     <div className='w-[80%] pb-2 shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
       <h2 className='text-gray-300 font-bold'>Image Cloud</h2>
       <img src={imgu} width={300} className='p-2 m-auto'/>
-      <button className='m-1 p-1 bg-pink-400 rounded-full'><a href="https://github.com/mohitrajparit/image-uploader-react">Live Demo</a></button>
-      <button className='m-1 p-1 bg-pink-400 rounded-full '><a href="Live Demo">Source Code</a></button>
+      <DesBut link={"https://github.com/mohitrajparit/image-uploader-react"} text={"Live Demo"}/>
+      <DesBut link={"https://github.com/mohitrajparit/image-uploader-react"} text={"Source Code"} />
     </div>
     
     <div className='w-[80%]  pb-2 shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
       <h2 className='text-gray-300 font-bold'>Climate Monitering</h2>
       <img src={img} width={300} className='p-2 m-auto'/>
-      <button className='m-1 p-1 bg-pink-400 rounded-full'><a href="https://github.com/mohitrajparit/Climate-Monitering">Live Demo</a></button>
-      <button className='m-1 p-1 bg-pink-400 rounded-full '> <a href="https://github.com/mohitrajparit/Climate-Monitering">Source Code</a></button>
+
+      <DesBut link={"https://github.com/mohitrajparit/Climate-Monitering"} text={"Live Demo"}/>
+      <DesBut link={"https://github.com/mohitrajparit/Climate-Monitering"} text={"Source Code"} />
     </div>
-    {/* <div className='w-[80%]  pb-2 shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-      <h2 className='text-gray-300 font-bold'>Drum Beat</h2>
-      <img src={drum} width={300} className='p-2 m-auto'/>
-      <button className='m-1 p-1 bg-pink-400 rounded-full'> <a href="https://mohitrajparit.github.io/Drum-Beats/">Live Demo</a></button>
-      <button className='m-1 p-1 bg-pink-400 rounded-full '><a href="https://github.com/mohitrajparit/Drum-Beats">Source Code</a></button>
-    </div> */}
     <div className='w-[80%]  pb-2 shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
       <h2 className='text-gray-300 font-bold'>Weather app</h2>
       <img src={weather} width={300} className='p-2 m-auto'/>
-      <button className='m-1 p-1 bg-pink-400 rounded-full'><a href="https://mohitrajparit.github.io/Weather-App/">Live Demo</a></button>
-      <button className='m-1 p-1 bg-pink-400 rounded-full '><a href="https://github.com/mohitrajparit/Weather-App">Source Code</a></button>
+      <DesBut link={"https://mohitrajparit.github.io/Weather-App/"} text={"Live Demo"}/>
+      <DesBut link={"https://github.com/mohitrajparit/Weather-App"} text={"Source Code"} />
     </div>
-    {/* <div className='w-[80%] pb-2 shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-      <h2 className='text-gray-300 font-bold'>TinDog</h2>
-      <img src={tin} width={300} className='p-2 m-auto'/>
-      <button className='m-1 p-1 bg-pink-400 rounded-full'><a href="https://mohitrajparit.github.io/TinDog/">Live Demo</a></button>
-      <button className='m-1 p-1 bg-pink-400 rounded-full '><a href="https://github.com/mohitrajparit/TinDog">Source Code</a></button>
-    </div> */}
     <div className='w-[80%] pb-2 shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
       <h2 className='text-gray-300 font-bold'>Nike clone</h2>
       <img src={nike} width={300} className='p-2 m-auto'/>
-      <button className='m-1 p-1 bg-pink-400 rounded-full'><a href="https://nike-clone-omega-cyan.vercel.app/">Live Demo</a></button>
-      <button className='m-1 p-1 bg-pink-400 rounded-full '><a href="https://github.com/mohitrajparit/Nike-clone">Source Code</a></button>
+      
+      <DesBut link={"https://nike-clone-omega-cyan.vercel.app/"} text={"Live Demo"}/>
+      <DesBut link={"https://github.com/mohitrajparit/Nike-clone"} text={"Source Code"} />
     </div>
     <div className='w-[80%]  pb-2 shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
       <h2 className='text-gray-300 font-bold'>Real time dataset analysis</h2>
       <img src={da} width={300} className='p-2 m-auto'/>
-      <button className='m-1 p-1 bg-pink-400 rounded-full'><a href="https://github.com/mohitrajparit/dsML/blob/main/dataAnalyse01.ipynb">Live Demo</a></button>
-      <button className='m-1 p-1 bg-pink-400 rounded-full '><a href="https://github.com/mohitrajparit/dsML/blob/main/dataAnalyse01.ipynb">Source Code</a></button>
+      
+      <DesBut link={"https://github.com/mohitrajparit/dsML/blob/main/dataAnalyse01.ipynb"} text={"Live Demo"}/>
+      <DesBut link={"https://github.com/mohitrajparit/dsML/blob/main/dataAnalyse01.ipynb"} text={"Source Code"} />
     </div>
     
   </div>
