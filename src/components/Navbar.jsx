@@ -4,7 +4,7 @@ import { toggleNav, selectNavOpen } from '../features/navbarSlice';
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-
+import { motion } from 'framer-motion';
 const Navbar = () => {
   const dispatch = useDispatch();
   const navOpen = useSelector(selectNavOpen);
@@ -20,12 +20,22 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <ul className='hidden md:flex'>
-        {['Home', 'About', 'Skills', 'Work', 'Contact'].map((text) => (
-          <li key={text} className='hover:animate-pulse hover:text-green-600'>
-            <a href={`/${text.toLowerCase()}`} className='text-lg'>{text}</a>
-          </li>
-        ))}
-      </ul>
+  {['Home', 'About', 'Skills', 'Work', 'Contact'].map((text, index) => (
+    <motion.li
+      key={text}
+      className='hover:animate-pulse hover:text-green-600'
+      initial={{ opacity: 0, x: -20 }} // Start from left with opacity 0
+      animate={{ opacity: 1, x: 0 }}  // Animate to normal position
+      exit={{ opacity: 0, x: 20 }}    // Exit by moving right with opacity 0
+      transition={{
+        delay: index * 0.1, // Add delay for staggered effect
+        duration: 0.4
+      }}
+    >
+      <a href={`/${text.toLowerCase()}`} className='text-lg'>{text}</a>
+    </motion.li>
+  ))}
+</ul>
 
       {/* Hamburger Icon */}
       <div onClick={handleClick} className='md:hidden z-10'>

@@ -15,6 +15,7 @@
     "@reduxjs/toolkit": "^2.3.0",
     "animated-backgrounds": "^1.1.0",
     "emailjs": "^4.0.3",
+    "framer-motion": "^11.18.0",
     "lottie-react": "^2.4.0",
     "lottie-web": "^5.12.2",
     "react": "^18.2.0",

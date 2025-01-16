@@ -1,5 +1,6 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import About from './components/About';
 import Home from './components/Home';
 import Contact from './components/Contact';
@@ -8,70 +9,105 @@ import Skills from './components/Skills';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Design from './components/Design';
+
 function App() {
+  const location = useLocation();
+
   return (
     <div>
       <Navbar />
 
-      {/* Main content area */}
+      {/* Main content area with framer motion transition */}
       <main className="flex-grow bg-opacity-80 backdrop-blur-lg">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path='/design' element={<Design/>}/>
-          <Route path="*" element={<Home/>} />
-        </Routes>
+        <AnimatePresence>
+          <Routes location={location} key={location.pathname}>
+            <Route
+              path="/"
+              element={
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Home />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <About />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/contact"
+              element={
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Contact />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/work"
+              element={
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Work />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/skills"
+              element={
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Skills />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/design"
+              element={
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Design />
+                </motion.div>
+              }
+            />
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </AnimatePresence>
       </main>
 
       {/* Footer is always visible */}
       <Footer />
     </div>
-    
-  
-  
-  
   );
 }
 
 export default App;
-<<<<<<< HEAD
-
-
-
-  
-  
-// App.js
-// import React from "react";
-// import FogEffect from "./components/FogEffect";
-
-// const App = () => {
-//   return (
-//     <div style={{ position: "relative", height: "100vh", width: "100%" }}>
-//       {/* Vanta.js Background */}
-//       <FogEffect />
-
-//       {/* Overlay Text */}
-//       <div
-//         style={{
-//           position: "absolute",
-//           top: "50%",
-//           left: "50%",
-//           transform: "translate(-50%, -50%)",
-//           color: "#ffffff",
-//           textAlign: "center",
-//           zIndex: 1, // Ensures text is above the Vanta effect
-//         }}
-//       >
-//         <h1 style={{ fontSize: "3rem", margin: 0 }}>Welcome to My Site</h1>
-//         <p style={{ fontSize: "1.5rem", margin: 0 }}>Exploring the foggy depths</p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default App;
-=======
->>>>>>> 08a33c943b05f29a5ffde7a43e62b5865b72f3bd
